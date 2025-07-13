@@ -35,7 +35,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/in/abhay-rajput-247a81298/" target="_blank" aria-label="LinkedIn" className="text-gray-600 hover:text-purple-600">
               <Linkedin className="w-4 h-4" />
             </a>
-            <a href="https://github.com/AbhayRajput47/" target="_blank" aria-label="GitHub" className="text-gray-600 hover:text-purple-600">
+            <a href="https://github.com/AbhayRajput47/ClipLinks" target="_blank" aria-label="GitHub" className="text-gray-600 hover:text-purple-600">
               <Github className="w-4 h-4" />
             </a>
           </div> 
