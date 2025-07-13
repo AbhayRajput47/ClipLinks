@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import Link from "next/link";
 
 const poppins = localFont({
-  src: "/font/Poppins-Extrabold.ttf",
+  src: "./font/Poppins-Extrabold.ttf",
   variable: "--font-poppins",
   weight: "100 900",
   subsets: ["latin"],
