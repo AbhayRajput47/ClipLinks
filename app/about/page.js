@@ -1,5 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -68,7 +69,7 @@ export default function AboutPage() {
           <h3 className="text-xl font-semibold text-purple-700 mb-2">🙋‍♂️ Got Feedback?</h3>
           <p className="text-lg">
             We&apos;d love to hear from you! Whether it&apos;s a bug, suggestion, or just a thumbs up —
-            <a href="/contact" className="text-purple-600 font-medium underline ml-1">reach out here.</a>
+            <Link href="/contact" className="text-purple-600 font-medium underline ml-1">reach out here.</Link>
           </p>
         </motion.div> 
       </div>
