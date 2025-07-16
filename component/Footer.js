@@ -21,7 +21,7 @@ export default function Footer() {
             <li><Link href="/" className="hover:text-purple-600">Home</Link></li>
             <li><Link href="/about" className="hover:text-purple-600">About</Link></li>
             <li><Link href="/contact" className="hover:text-purple-600">Contact</Link></li>
-            <li><a href="https://github.com/AbhayRajput47/ClipLinks" target="_blank" className="hover:text-purple-600">GitHub</a></li>
+            <li><a href="/clipLinks" target="_blank" className="hover:text-purple-600">GitHub</a></li>
           </ul>
         </div>
 
