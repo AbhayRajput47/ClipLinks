@@ -20,21 +20,11 @@
 //     })
 //     return Response.json({success:true,error: false, message:'URL Generated Successfully'})
 // }
-
 import clientPromise from "@/lib/mongodb";
 
 export async function POST(request) {
   try {
     const body = await request.json();
-
-    if (!body.url || !body.shorturl) {
-      return Response.json({
-        success: false,
-        error: true,
-        message: "URL and short URL are required",
-      }, { status: 400 });
-    }
-
     const client = await clientPromise;
     const db = client.db("cliplinks");
     const collection = db.collection("url");
@@ -45,11 +35,11 @@ export async function POST(request) {
       return Response.json({
         success: false,
         error: true,
-        message: "Short URL already exists",
-      }, { status: 400 });
+        message: "URL already exists",
+      });
     }
 
-    // Save to DB
+    // Insert new URL
     await collection.insertOne({
       url: body.url,
       shorturl: body.shorturl,
@@ -59,14 +49,13 @@ export async function POST(request) {
       success: true,
       error: false,
       message: "URL Generated Successfully",
-    }, { status: 201 });
-
+    });
   } catch (err) {
-    console.error("API Error:", err); // shows in Vercel logs
+    console.error("Generate API Error:", err);
     return Response.json({
       success: false,
       error: true,
-      message: "Internal Server Error",
+      message: err.message || "Internal Server Error",
     }, { status: 500 });
   }
 }
